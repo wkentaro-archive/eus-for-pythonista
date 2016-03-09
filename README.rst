@@ -72,8 +72,8 @@ dict
   > 1
 
 
-extend
-======
+list.extend
+===========
 
 **Python**
 
@@ -96,8 +96,8 @@ extend
   > (1 2 3 4)
 
 
-append
-======
+list.append
+===========
 
 **Python**
 
