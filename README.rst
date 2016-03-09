@@ -43,6 +43,8 @@ zip
   (setq lst1 (list "a" "b" "c"))
   (setq lst2 (list 1 2 3))
   (mapcar #'cons lst1 lst2)
+  ;; or
+  (pairlis lst1 lst2)
 
 
 dict
