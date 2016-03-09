@@ -8,6 +8,7 @@ Euslisp for Pythonista
 * `dict <#dict>`_
 * `list.append <#listappend>`_
 * `list.extend <#listextend>`_
+* `dict.items <#dictitems>`_
 
 
 map
@@ -130,3 +131,24 @@ list.append
   (pushback 2 a)
   a
   > (1 2)
+
+
+dict.items
+==========
+
+**Euslisp**
+
+::
+
+  (setq table (make-hash-table))
+  (sethash :a table 1)
+  (sethash :b table 2)
+  (sethash :c table 3)
+  (send table :list)
+  > ((:a . 1) (:b . 2) (:c . 3))
+  (dolist (pair (send table :list))
+    (format t "key: ~a, value: ~a~%" (car pair) (cdr pair))
+    )
+  > key: :c, value: 3
+  > key: :b, value: 2
+  > key: :a, value: 1
