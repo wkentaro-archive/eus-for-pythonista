@@ -14,14 +14,6 @@ Euslisp for Pythonista
 map
 ===
 
-**Python**
-
-::
-
-  lst = [1, 2, 3]
-  map(lambda x: x+1, lst)
-  > [2, 3, 4]
-
 **Euslisp**
 
 ::
@@ -34,16 +26,6 @@ map
 zip
 ===
 
-**Python**
-
-::
-
-  lst1 = ["a", "b", "c"]
-  lst2 = [1, 2, 3]
-  zip(lst1, lst2)
-  > [("a", 1), ("b", 2), ("c", 3)]
-
-
 **Euslisp**
 
 ::
@@ -51,19 +33,11 @@ zip
   (setq lst1 (list "a" "b" "c"))
   (setq lst2 (list 1 2 3))
   (pairlis lst1 lst2)
+  > (("a" . 1) ("b" . 2) ("c" . 3))
 
 
 dict
 ====
-
-**Python**
-
-::
-
-  zipped = [("a", 1), ("b", 2), ("c", 3)]
-  dict(zipped)
-  > {'a': 1, 'b': 2, 'c': 3}
-
 
 **Euslisp**
 
@@ -83,17 +57,6 @@ dict
 list.extend
 ===========
 
-**Python**
-
-::
-
-  lst1 = [1, 2]
-  lst2 = [3, 4]
-  lst1.extend(lst2)
-  lst1
-  > [1, 2, 3, 4]
-
-
 **Euslisp**
 
 ::
@@ -106,17 +69,6 @@ list.extend
 
 list.append
 ===========
-
-**Python**
-
-::
-
-  a = []
-  a.append(1)
-  a.append(2)
-  a
-  > [1, 2]
-
 
 **Euslisp**
 
@@ -146,9 +98,3 @@ dict.items
   (sethash :c table 3)
   (send table :list)
   > ((:a . 1) (:b . 2) (:c . 3))
-  (dolist (pair (send table :list))
-    (format t "key: ~a, value: ~a~%" (car pair) (cdr pair))
-    )
-  > key: :c, value: 3
-  > key: :b, value: 2
-  > key: :a, value: 1
