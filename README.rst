@@ -73,3 +73,55 @@ dict
   (gethash "a")
   > 1
 
+
+extend
+======
+
+**Python**
+
+::
+
+  lst1 = [1, 2]
+  lst2 = [3, 4]
+  lst1.extend(lst2)
+  lst1
+  > [1, 2, 3, 4]
+
+
+**Euslisp**
+
+::
+
+  (setq lst1 (list 1 2))
+  (setq lst2 (list 3 4))
+  (append lst1 lst2)
+  > (1 2 3 4)
+
+
+append
+======
+
+**Python**
+
+::
+
+  a = []
+  a.append(1)
+  a.append(2)
+  a
+  > [1, 2]
+
+
+**Euslisp**
+
+::
+
+  (defmacro pushback (el lst)
+    `(if (null ,lst)
+        (setf ,lst (list ,el))
+      (nconc ,lst (list ,el))))
+  (setq a)
+  (pushback 1 a)
+  (pushback 2 a)
+  a
+  > (1 2)
