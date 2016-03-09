@@ -62,7 +62,7 @@ dict
 ::
 
   (setq zipped (("a" . 1) ("b" . 2) ("c" . 3)))
-  (setq table (make-hashtable :test #'equal))
+  (setq table (make-hash-table :test #'equal))
   (dolist (pair zipped)
     (sethash (car pair) table (cdr pair))
     )
