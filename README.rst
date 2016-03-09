@@ -3,6 +3,13 @@ Euslisp for Pythonista
 ======================
 
 
+* `map <#map>`_
+* `zip <#zip>`_
+* `dict <#dict>`_
+* `list.append <#listappend>`_
+* `list.extend <#listextend>`_
+
+
 map
 ===
 
