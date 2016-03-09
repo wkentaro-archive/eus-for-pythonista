@@ -1,7 +1,7 @@
 ;; vim: set ft=lisp:
 
 
-(defun zip (a b) (mapcar #'cons a b))
+(defun zip (a b) (pairlis a b))
 
 
 (defun dict (zipped)
